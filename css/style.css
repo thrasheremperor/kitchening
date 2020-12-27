@@ -1,0 +1,252 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* MOBILE FIRST */
+
+body {
+    background-image: url('../images/bg-body.png');
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header .logo {
+    width: 180px;
+    margin: 15px 0 30px 0;
+    border-radius: 90px;
+}
+
+.toggle-nav {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.toggle-nav span {
+    background-color: gray;
+    padding: 5px;
+}
+
+.main-nav li {
+    background-color: gray;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.main-nav li a:hover{
+    color: firebrick;
+}
+
+/* BANNER */
+
+.banner img {
+    display: none;
+}
+
+/* PRODUCTS */
+
+.container section.vip-products article {
+    margin-bottom: 30px;
+}
+
+.container section.vip-products article .photo-container {
+    position: relative;
+}
+
+.container section.vip-products article .photo {
+    width: 100%;
+}
+
+.container section.vip-products article .special {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.container section.vip-products .zoom {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    padding: 5px;
+}
+
+.container section.vip-products article.product h2 {
+    margin: 10px 0;
+}
+
+.container section.vip-products article.product p {
+    margin-bottom: 10px;
+}
+
+.container section.vip-products article.product a.more {
+    background-color: rgb(61, 61, 61);
+    padding: 5px;
+    text-transform: lowercase;
+}
+
+/* FOOTER */
+
+.main-footer li {
+    background-color: firebrick;
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+.main-footer li a:hover{
+    color: gray;
+}
+
+/* TABLET */
+
+@media(min-width:426px) {
+    header {
+        margin-bottom: 40px;
+    }
+
+    .toggle-nav {
+        display: none;
+    }
+
+    .main-nav {
+        line-height: 3rem;
+    }
+
+    .main-nav li {
+        display: inline;
+        margin-right: 10px;
+        padding: 13px
+    }
+
+    .main-nav li:last-child {
+        margin-right: 0px;
+    }
+
+    /* BANNER */
+
+    .banner img {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* PRODUCTS */
+
+    .container section.vip-products {
+        overflow: hidden;
+    }
+
+    .container section.vip-products article {
+        float: left;
+        width: 48%;
+    }
+
+    .container section.vip-products article:nth-child(odd) {
+        margin-right: 4%;
+    }
+}
+
+/* DESKTOP */
+
+@media(min-width: 769px) {
+
+    .container {
+        max-width: 1180px;
+    }
+
+    ul {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .main-nav {
+        line-height: normal;
+        width: 150px;
+        display: inline;
+    }
+
+    .main-nav li {
+        width: 180px;
+        float: left;
+        margin-right: 16px;
+    }
+
+    /* PRODUCTS */
+
+    .container section.vip-products article {
+        width: 380px;
+        float: left;
+    }
+
+    .container section.vip-products article:nth-child(odd) {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .container section.vip-products article:nth-child(even) {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .container section.vip-products article:nth-child(3n-1) {
+        margin: 0px 10px;
+    }
+
+    /* FOOTER */
+
+    .container {
+        padding: 10px 0 0;
+    }
+
+    .main-footer {
+        padding: 20px;
+        background-color: firebrick;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        padding: 40px 0 50px;
+    }
+
+    .main-footer li {
+        border: none;
+        display: inline;
+
+    }
+
+    .main-footer li a {
+        text-transform: capitalize;
+        padding: 10px;
+    }
+
+    .main-footer li:not(:last-child) {
+        border-right: 1px solid white;
+    }
+
+}
